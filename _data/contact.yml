@@ -26,10 +26,10 @@
 # - type: stack-overflow
 #   icon: 'fab fa-stack-overflow'
 #   url:  ''                  # Fill with your stackoverflow homepage
-- type: tryhackme
-  icon: '/assets/svg/tryhackme.svg'   
-  url:  'https://tryhackme.com/p/sullydan'                  # Fill with your TryHackMe homepage
+# - type: tryhackme
+#   icon: '/assets/svg/tryhackme.svg'   
+#   url:  'https://tryhackme.com/p/sullydan'                  # Fill with your TryHackMe homepage
 
-  - type: hackthebox
-  icon: 'assets/svg/hackthebox.svg'  
-  url:  'https://app.hackthebox.com/profile/1811089'                  # Fill with your HacktheBox homepage
+#   - type: hackthebox
+#   icon: 'assets/svg/hackthebox.svg'  
+#   url:  'https://app.hackthebox.com/profile/1811089'                  # Fill with your HacktheBox homepage
