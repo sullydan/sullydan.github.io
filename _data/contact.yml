@@ -28,9 +28,9 @@
 #   url:  ''                  # Fill with your stackoverflow homepage
 
 - type: #tryhackme
-  icon: 'fa-regular fa-cloud'   
+  icon: 'fa-solid fa-cloud'   # fix later when fontawesome supports tryhackme
   url:  'https://tryhackme.com/p/sullydan'                  # Fill with your TryHackMe homepage
 
 - type: #hackthebox
-  icon: 'fa-regular fa-cube'  
+  icon: 'fa-solid fa-cube'    # fix later when fontawesome supports hackthebox
   url:  'https://app.hackthebox.com/profile/1811089'                  # Fill with your HacktheBox homepage
