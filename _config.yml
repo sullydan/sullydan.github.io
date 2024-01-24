@@ -41,6 +41,8 @@ social:
     # Uncomment below to add more social links
     # - https://www.facebook.com/username
     - https://www.linkedin.com/in/dan-sullivan-375aa335
+    - https://tryhackme.com/p/sullydan  
+    - https://app.hackthebox.com/profile/1811089
 
 google_site_verification: # fill in to your verification string
 
@@ -71,7 +73,7 @@ theme_mode: # [light|dark]
 img_cdn:
 
 # the avatar on sidebar, support local or CORS resources
-# avatar:
+avatar:
 
 # The URL of the site-wide social preview image used in SEO `og:image` meta tag.
 # It can be overridden by a customized `page.image` in front matter.
