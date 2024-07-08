@@ -1,6 +1,6 @@
 ---
 title: TryHackMe - Relevant
-date: YYYY-MM-DD HH:MM:SS +/-TTTT
+date: 2024-07-08T14:32:00
 categories:
   - Posts
   - TryHackMe
