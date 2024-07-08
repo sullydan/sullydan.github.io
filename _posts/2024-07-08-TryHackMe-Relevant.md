@@ -11,7 +11,7 @@ tags:
   - PrintSpoofer
   - Windows
 ---
-![Pasted image 20240708112244.png](https://raw.githubusercontent.com/sullydan/sullydan.github.io/main/assets/imagesPasted%20image%2020240708112244.png)
+![Pasted image 20240708112244.png](https://raw.githubusercontent.com/sullydan/sullydan.github.io/main/assets/images/Pasted%20image%2020240708112244.png)
 ## Summary
 Take advantage of an open SMB share
 Abuse SEImpersonate privileges
@@ -87,7 +87,7 @@ Host script results:
 
 Let's go through the ports in order.
 #### Port 80
-![Pasted image 20240708114908.png](https://raw.githubusercontent.com/sullydan/sullydan.github.io/main/assets/imagesPasted%20image%2020240708114908.png)
+![Pasted image 20240708114908.png](https://raw.githubusercontent.com/sullydan/sullydan.github.io/main/assets/images/Pasted%20image%2020240708114908.png)
 We visit the http site on Firefox and it appears to be a fresh install of IIS. Let's run gobuster and see if we have access to anything interesting.
 ```
 $ gobuster dir -u http://10.10.6.212 -w /usr/share/dirb/wordlists/directory-list-2.3-medium.txt
@@ -155,7 +155,7 @@ $ xfreerdp /u:Bill /v:10.10.6.212
 ```
 Neither set of credentials allowed us to login so we'll move on to the next port in our list. 
 #### Port 49663
-![Pasted image 20240708115058.png](https://raw.githubusercontent.com/sullydan/sullydan.github.io/main/assets/imagesPasted%20image%2020240708115058.png)
+![Pasted image 20240708115058.png](https://raw.githubusercontent.com/sullydan/sullydan.github.io/main/assets/images/Pasted%20image%2020240708115058.png)
 Once again, it appears to be a default install of IIS. Let's run gobuster again and see if we get different results.
 ```
 $ gobuster dir -u http://10.10.6.212:49663 -w /usr/share/dirbuster/wordlists/directory-list-2.3-medium.txt 
