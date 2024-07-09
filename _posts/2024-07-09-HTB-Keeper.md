@@ -10,11 +10,11 @@ tags:
   - OpenSSH
   - RequestTracker
 ---
-![https://raw.githubusercontent.com/sullydan/sullydan.github.io/main/assets/images/Keeper.png]
+![Keeper.png](https://raw.githubusercontent.com/sullydan/sullydan.github.io/main/assets/images/Keeper.png)
 ## Summary
 Use default credentials to access ticketing system <br/>
 Find cleartext password for initial SSH access <br/>
-Leverage KeePass database to retrieve SSH key for root
+Leverage KeePass vulnerability to retrieve SSH key for root
 ## Enumeration
 #### Port Scanning
 We'll start off by running nmap and exporting the results in all formats. 
@@ -135,6 +135,16 @@ $ puttygen ssh-rsa -o keeper_id_rsa -O private-openssh
 ```
 Now to use our newfound key to SSH into the server. Note: the root username was specified in the database entry we found.
 ```
-ssh -i keeper_id_rsa root@10.10.11.227
+$ ssh -i keeper_id_rsa root@10.10.11.227
+Welcome to Ubuntu 22.04.3 LTS (GNU/Linux 5.15.0-78-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+You have new mail.
+Last login: Tue Aug  8 19:00:06 2023 from 10.10.14.41
+root@keeper:~# whoami
+root
+
 ```
 That's it, we officially have root!
