@@ -23,3 +23,9 @@ assets/js/dist
 
 # Obsidian
 .obsidian
+
+# Syncthing
+.stfolder
+
+# Drafts
+_drafts

@@ -13,7 +13,7 @@ tags:
 ---
 ![Pasted image 20240708112244.png](https://raw.githubusercontent.com/sullydan/sullydan.github.io/main/assets/images/Pasted%20image%2020240708112244.png)
 ## Summary
-Take advantage of an open SMB share
+Take advantage of an open SMB share <br/>
 Abuse SEImpersonate privileges
 ## Enumeration
 #### Port Scanning
@@ -221,7 +221,7 @@ $ curl http://10.10.11.52:49663/nt4wrksv/shell.aspx`
 Meterpreter session1 opened!
 We can now start poking around. I immediately went to the `C:\Users` directory to look for the user flag. We have full access to Bob's user folder and therein lies the user flag on his Desktop. 
 ## Privilege Escalation
-Let's enumerate our current priviledges.
+Let's enumerate our current privileges.
 ```
 meterpreter > getprivs
 
