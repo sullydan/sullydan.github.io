@@ -9,8 +9,8 @@ tags:
   - KeePass
   - OpenSSH
   - RequestTracker
+image: ../assets/images/Keeper.png
 ---
-![Keeper.png](https://raw.githubusercontent.com/sullydan/sullydan.github.io/main/assets/images/Keeper.png)
 ## Summary
 Use default credentials to access ticketing system <br/>
 Find cleartext password for initial SSH access <br/>
@@ -38,13 +38,13 @@ It appears there's only two TCP ports open, 22 (ssh) and 80 (http). Nmap reveals
 
 #### Port 80
 Upon visiting http://keeper.htb we are met with a link to raise an IT support ticket.
-![Pasted image 20240709140705 1.png](https://raw.githubusercontent.com/sullydan/sullydan.github.io/main/assets/images/Pasted%20image%2020240709140705%201.png)
+![Pasted image 20240709140705 1.png](../assets/images/Pasted%20image%2020240709140705.png)
 
 After following the link, we're met with a login page with some interesting details about the tech stack. My first instinct is to find documentation on the application and look for default credentials, followed by searching the web for any CVEs that may apply to version 4.4.4.
-![Pasted image 20240709140755.png](https://raw.githubusercontent.com/sullydan/sullydan.github.io/main/assets/images/Pasted%20image%2020240709140755.png)
+![Pasted image 20240709140755.png](../assets/images/Pasted%20image%2020240709140755.png)
 
 As luck would have it, the default credentials for Request Tracker authenticate us as the root user. After some poking around, we find a listing of other users among which we find lnorgaard (Lise Nørgaard.) Lise is a new user with their initial password stored in plaintext. 
-![Pasted image 20240709141101.png](https://raw.githubusercontent.com/sullydan/sullydan.github.io/main/assets/images/Pasted%20image%2020240709141101.png)
+![Pasted image 20240709141101.png](../assets/images/Pasted%20image%2020240709141101.png)
 
 #### SSH
 Let's take those credentials and attempt an SSH connection. 
@@ -76,7 +76,7 @@ Archive:  RT30000.zip
  extracting: passcodes.kdbx 
 ```
 So we have a dump file and running the file command on passcodes.kdbx reveals a KeePass database version 2.x. We can use 'kpcli' to interact with the database but it is password protected. Fortunately for us, this version happens to have a vulnerability that allows us to reveal the master password. Running the tool https://github.com/vdohney/keepass-password-dumper we get the following:
-![Pasted image 20240709151105.png](https://raw.githubusercontent.com/sullydan/sullydan.github.io/main/assets/images/Pasted%20image%2020240709151105.png)
+![Pasted image 20240709151105.png](../assets/images/Pasted%20image%2020240709151105.png)
 Googling the last two words we can reveal the first two characters as part of a popular Danish dessert. Now we can open the database and look for credentials that may help us pivot or escalate our credentials.
 ```
 $ kpcli
